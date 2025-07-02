@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Simon Game</title>
+    
+    <link rel="icon" href="images/simon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="simon.css">
+</head>
+<body>
+    
+    <div class="text-center mt-4">
+        <h2>Record : <span id="record">0</span></h2>
+    </div>
+
+
+    <div class="container">
+
+        <div class="row">
+            <div id="green" class="color-btn"></div>
+            <div id="red" class="color-btn"></div>
+        </div>
+
+        <div class="play-btn play-click">
+            <p class="play-click">SIMON</p>
+        </div>
+
+        <div class="row">
+            <div id="yellow" class="color-btn"></div>
+            <div id="blue" class="color-btn"></div>
+        </div>
+
+    </div>
+
+
+    <div class="text-center mt-4">
+        <h4 id="start-msg">Cliquez sur SIMON pour commencer la partie !</h4>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="simon.js"></script>
+</body>
+</html>

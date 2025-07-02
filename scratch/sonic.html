@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projet Scratch – Sonic</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="style_scratch.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🌀 Projet : Sonic</h1>
+    <p>Un jeu de plateforme réalisé avec Scratch</p>
+  </header>
+
+  <nav>
+    <a href="../index.html">🏠 Accueil</a>
+    <a href="../debutant.html">← Retour aux projets débutants</a>
+  </nav>
+
+  <main class="content">
+    <section>
+      <h2>🎮 Joue au jeu Sonic</h2>
+      <p>Clique sur le drapeau vert pour démarrer :</p>
+      <iframe
+        src="https://scratch.mit.edu/projects/1191928226/embed"
+        allowtransparency="true"
+        width="485"
+        height="402"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section>
+      <h2>🎓 Crée ton propre Sonic</h2>
+      <p>Choisis une partie du tutoriel à regarder :</p>
+
+      <div class="video-buttons">
+        <button onclick="changerVideo(1)">Partie 1</button>
+        <button onclick="changerVideo(2)">Partie 2</button>
+        <button onclick="changerVideo(3)">Partie 3</button>
+        <button onclick="changerVideo(4)">Partie 4</button>
+      </div>
+
+      <div class="video-container">
+        <iframe
+          id="video"
+          src="https://www.youtube.com/embed/JUGvWKkou80"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p>
+        <a href="https://scratch.mit.edu/projects/490408819/editor/" target="_blank">
+          <button class="btn-green">Lancer l’éditeur Scratch</button>
+        </a>
+      </p>
+    </section>
+  </main>
+
+<script>
+  function changerVideo(partie) {
+    const videos = {
+      1: "JUGvWKkou80",
+      2: "oa6EOskURQs",
+      3: "tqwpuEpCPnw",
+      4: "cYjHwj3872I"
+    };
+
+    document.getElementById("video").src = `https://www.youtube.com/embed/${videos[partie]}`;
+
+    const buttons = document.querySelectorAll(".video-buttons button");
+    buttons.forEach(btn => btn.classList.remove("active"));
+    document.querySelector(`.video-buttons button:nth-child(${partie})`).classList.add("active");
+  }
+
+  window.onload = () => changerVideo(1);
+</script>
+
+
+</body>
+</html>

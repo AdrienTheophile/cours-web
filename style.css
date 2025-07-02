@@ -1,0 +1,105 @@
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+  
+header {
+    background-color: #4dabf7;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+  
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #007bff;
+    flex-wrap: wrap;
+}
+  
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+  
+nav a:hover {
+    background-color: #0056b3;
+}
+  
+main {
+    padding: 20px;
+    text-align: center;
+}
+  
+.intro,
+.content,
+section {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+ul.no-bullets {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1em;
+}
+
+ul.no-bullets li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+iframe {
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Adapté pour petits écrans */
+@media (max-width: 600px) {
+    nav a {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .intro,
+    .content {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}

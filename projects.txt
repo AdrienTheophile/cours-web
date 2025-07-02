@@ -1,0 +1,8 @@
+-- Snake
+
+https://www.youtube.com/watch?v=bfRwxS5d0SI
+
+pip install pyinstaller
+pyinstaller --onefile --noconsole main.py
+
+Va dans le dossier dist et tu trouvers le jeu.exe
