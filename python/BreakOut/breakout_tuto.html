@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet Python – Breakout</title>
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../style_python.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🏓 Projet : Breakout (Python)</h1>
+    <p>Un classique du jeu d’arcade recréé avec Python, à tester directement !</p>
+  </header>
+
+  <nav>
+    <a href="../../index.html">🏠 Accueil</a>
+    <a href="../../confirme.html">← Retour aux projets confirmés</a>
+  </nav>
+
+  <main class="content">
+
+    <section>
+      <h2>🎮 Télécharge et joue à Breakout</h2>
+      <img src="BreakoutGame.jpg" alt="Aperçu du jeu Breakout"
+           style="max-width: 90%; border-radius: 10px; margin-bottom: 20px;" />
+
+      <p>Tu peux télécharger le jeu Breakout pour Windows ici :</p>
+
+      <a href="breakout.exe" download>
+        <button class="btn-green">⬇️ Télécharger Breakout.exe</button>
+      </a>
+
+      <p style="margin-top: 15px;">💡 Une fois téléchargé, double-clique sur le fichier pour lancer le jeu. Aucun logiciel n’est nécessaire.</p>
+    </section>
+
+    <section>
+      <h2>🎓 Apprends à coder Breakout en Python</h2>
+      <p>Voici une vidéo complète pour apprendre à coder Breakout avec Python :</p>
+
+      <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/NIfkaOF3Hjs?t=667"
+              title="Tutoriel Breakout Python"
+              frameborder="0"
+              allowfullscreen>
+      </iframe>
+    </section>
+    
+    <section>
+      <h2>📦 Installer Pygame</h2>
+      <p>Pour coder ce projet Python, tu auras besoin de la bibliothèque <strong>Pygame</strong>. Installe-la avec cette commande :</p>
+      <pre style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; overflow-x: auto;">pip install pygame</pre>
+    </section>
+
+    <section>
+      <h2>🛠️ Convertir ton jeu Python en .exe</h2>
+      <p>Quand ton jeu est terminé, tu peux le transformer en exécutable avec <strong>PyInstaller</strong> :</p>
+
+      <pre style="text-align: left; background-color: #f8f9fa; padding: 15px; border-radius: 8px; overflow-x: auto;">
+        pip install pyinstaller
+        pyinstaller --onefile --noconsole main.py
+      </pre>
+
+      <p>💾 Va ensuite dans le dossier <strong>dist/</strong> : tu y trouveras ton <strong>main.exe</strong> prêt à être partagé !</p>
+    </section>
+
+  </main>
+
+</body>
+</html>
