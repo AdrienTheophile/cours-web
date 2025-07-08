@@ -52,6 +52,77 @@
       </ul>
     </section>
 
+    <section>
+    <h2>📜 Code utilisé dans le projet</h2>
+    <p>Voici les scripts utilisés dans le projet. Tu peux les lire ici :</p>
+
+    <h3>🎮 Move.cs</h3>
+    <pre class="no-copy">
+      <code>
+      using System.Collections;
+      using System.Collections.Generic;
+      using UnityEngine;
+
+      public class move : MonoBehaviour
+      {
+          public float speed = 6f;
+          public float Jumpspeed = 8f;
+          public float gravity = 20f;
+
+          private Vector3 moveD = Vector3.zero;
+          CharacterController Cac;
+
+          void Start()
+          {
+              Cac = GetComponent&lt;CharacterController&gt;();
+          }
+
+          void Update()
+          {
+              if (Cac.isGrounded)
+              {
+                  moveD = new Vector3(0, 0, Input.GetAxis("Vertical"));
+                  moveD = transform.TransformDirection(moveD);
+                  moveD *= speed;
+
+                  if (Input.GetButton("Jump"))
+                  {
+                      moveD.y = Jumpspeed;
+                  }                       
+              }
+              moveD.y -= gravity * Time.deltaTime;
+              transform.Rotate(Vector3.up * Input.GetAxis("Horizontal") * Time.deltaTime * speed * 10);
+              Cac.Move(moveD * Time.deltaTime);
+          }
+      }
+      </code>
+        </pre>
+
+        <h3>🕺 Animator.cs</h3>
+        <pre class="no-copy">
+      <code>
+      using System.Collections;
+      using System.Collections.Generic;
+      using UnityEngine;
+
+      public class Animate : MonoBehaviour
+      {
+          Animator PlayerAnimator;
+
+          void Awake() {
+              PlayerAnimator = GetComponent&lt;Animator&gt;();
+          }
+
+          void Update()
+          {
+              PlayerAnimator.SetFloat("walk", Input.GetAxis("Vertical"));
+          }
+      }
+      </code>
+    </pre>
+  </section>
+
+
   </main>
 
 </body>

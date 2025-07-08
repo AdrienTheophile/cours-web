@@ -17,3 +17,21 @@
   height: 100%;
   border: none;
 }
+
+pre.no-copy {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  user-select: none; /* empêche la sélection du texte */
+  pointer-events: none; /* empêche clic droit/copie */
+  font-family: 'Courier New', monospace;
+  line-height: 1.5;
+}
+
+pre,
+code,
+pre.no-copy {
+  text-align: left;
+}
