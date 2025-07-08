@@ -35,3 +35,8 @@ code,
 pre.no-copy {
   text-align: left;
 }
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
